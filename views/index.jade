@@ -1,5 +1,87 @@
-extends layout
+doctype html
+html
+head
+    title
+      | Payment for recording
+    // Meta Tags
+    meta(charset='utf-8')
+    meta(name='generator', content='Wufoo')
+    meta(name='robots', content='index, follow')
+    // CSS
+    link(href='stylesheets/structure.css', rel='stylesheet')
+    link(href='stylesheets/form.css', rel='stylesheet')
+    // JavaScript
+    script(src='javascripts/wufoo.js')
+    //if lt IE 10
+      script(src='https://html5shiv.googlecode.com/svn/trunk/html5.js')
+  body#public
+    #container.ltr
+      h1#logox
+        a(href='http://www.tonostechnology.com', style='font-family:quicksand', title='Powered by Tonos Technology') TONOS TECHNOLOGY
+      form#form2.wufoo.topLabel.page(name='form2', accept-charset='UTF-8', autocomplete='off', enctype='multipart/form-data', method='post', novalidate='', action='https://tonostechnology.wufoo.com/forms/mpqf0bv0wz8l9q/#public')
+        header#header.info
+          h2 Recording Payment
+          div
+        ul
+          li#foli16.notranslate
+            label#title16.desc(for='Field16')
+              | Name
+              span#req_16.req *
+            span
+              input#Field16.field.text.fn(name='Field16', type='text', value='', size='8', tabindex='1', required='')
+              label(for='Field16') First
+            span
+              input#Field17.field.text.ln(name='Field17', type='text', value='', size='14', tabindex='2', required='')
+              label(for='Field17') Last
+          li#foli18.notranslate
+            label#title18.desc(for='Field18')
+              | Email
+              span#req_18.req *
+            div
+              input#Field18.field.text.medium(name='Field18', type='email', spellcheck='false', value='', maxlength='255', tabindex='3', required='')
+          li#foli21.date.notranslate
+            label#title21.desc(for='Field21')
+              | Event Date
+              span#req_21.req *
+            span
+              input#Field21-1.field.text(name='Field21-1', type='text', value='', size='2', maxlength='2', tabindex='4', required='')
+              label(for='Field21-1') MM
+            span.symbol /
+            span
+              input#Field21-2.field.text(name='Field21-2', type='text', value='', size='2', maxlength='2', tabindex='5', required='')
+              label(for='Field21-2') DD
+            span.symbol /
+            span
+              input#Field21.field.text(name='Field21', type='text', value='', size='4', maxlength='4', tabindex='6', required='', readonly='')
+              label(for='Field21') YYYY
+            span#cal21
+              img#pick21.datepicker(src='images/calendar.png', alt='Pick a date.', data-date-format='yyyy-mm-dd', data-date='2014-12-27')
+          li#foli25.time.notranslate
+            label#title25.desc(for='Field25')
+              | Event Start Time
+              span#req_25.req *
+            span.hours
+              input#eventStartHours.field.text(name='Field25', type='text', value='', size='2', maxlength='2', tabindex='7', required='')
+              label(for='Field25') HH
+            span.symbol.minutes :
+            span.minutes
+              input#eventStartMinutes.field.text(name='Field25-1', type='text', value='', size='2', maxlength='2', tabindex='8', required='')
+              label(for='Field25-1') MM
+            span.ampm
+              select#amPm.field.select(name='Field25-3', style='width:4em', tabindex='10')
+                option(value='AM', selected='selected') AM
+                option(value='PM') PM
+              label(for='Field25-3') AM/PM
+          li#foli23.notranslate
+            label#title23.desc(for='Field23')
+              | Location
+            div
+              select#location.field.select.medium(name='Field23', tabindex='11')
+                option(value='West Houston Indoor Soccer', selected='selected')
+                  | West Houston Indoor Soccer
+          |  
+          li.buttons
+            div
+              input#saveForm.btTxt.submit(name='saveForm', type='submit', value='Submit')
+    // container
 
-block content
-  h1= title
-  p Welcome to #{title}
